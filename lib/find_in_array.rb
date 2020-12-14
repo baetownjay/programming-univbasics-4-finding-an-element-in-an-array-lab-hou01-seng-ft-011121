@@ -1,12 +1,16 @@
 def find_element_index(array, value_to_find)
   # Add your solution here
   i = 0
-  while i < array.length do
-    puts [i]
-    i++
+  append = []
+  for i in array do
+    if array[i] == value_to_find
+      return i
+    else
+      append.push(0)
+    end
+    i += 1
+  end
+  if append > 0
+    return nil
   end
 end
-end
-
-a = [10,20,30]
-find_element_index(a, 20)
